@@ -14,6 +14,8 @@ services:
       - GQRX_PORT=${GQRX_PORT} 
     ports:
       - "3030:3030"
+    volumes:
+      - ${GQRX_DATA_DIR}:/usr/src/app/data
   http:
     image: nginx:latest
     volumes:
